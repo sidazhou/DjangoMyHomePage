@@ -23,9 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-z+kog)n%zsid^xs5+#)i74kmg266#_-kr%v+@ix(-tu_v3knhd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# sidazhou.com and all sub domains
+ALLOWED_HOSTS = ['.sidazhou.com']
 
 
 # Application definition
