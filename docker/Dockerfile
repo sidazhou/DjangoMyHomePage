@@ -4,21 +4,19 @@ MAINTAINER Sida Zhou <sidazhou@gmail.com>
 SHELL ["/bin/bash", "-c"]
 
 
-ENV HOME=/usr/src/app
-COPY . $HOME
-WORKDIR $HOME
+ENV WORKDIR=/usr/src/app
+WORKDIR $WORKDIR
 
-COPY requirements.txt ./
+# https://stackoverflow.com/a/25307587/2202107
+ADD requirements.txt ./
 RUN pip install -r requirements.txt
-COPY . .
 
 EXPOSE 8000
+EXPOSE 8080
 
 RUN python --version
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+ADD . $WORKDIR
 
-# docker build -f docker/Dockerfile -t django .
-# # docker run -p 8000:8000 --user "$(id -u):$(id -g)" -v "$PWD":/usr/src/app --name myhomepage django-admin startproject myhomepage
-# docker run -p 8000:8000 --user "$(id -u):$(id -g)" -v "$PWD":/usr/src/app --name myhomepage django
-# docker run -p 8000:8000 --name django django
+# CMD ["python", "manage.py", "runserver", "0.0.0.0:8080"]
+CMD ["gunicorn", "myhomepage.wsgi", "-b", "0.0.0.0:8000"]
