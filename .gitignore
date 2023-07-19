@@ -78,3 +78,5 @@ tmp/
 data/
 notebooks/data/
 notebooks/dataset/
+staticroot/
+

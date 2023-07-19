@@ -4,11 +4,10 @@ docker rm -f djangomyhomepage &> /dev/null
 echo "starting container..."
 
 docker run -itd \
-                -p 8000:8000 \
                 -p 8080:8080 \
                 -v $(pwd):/usr/src/app \
                 --name djangomyhomepage \
-                sidazhou/djangomyhomepage:latest
+                sidazhou/djangomyhomepage:latest python manage.py runserver 0.0.0.0:8080
 docker logs -f djangomyhomepage
 
 
