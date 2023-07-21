@@ -11,6 +11,7 @@ docker run -it --rm \
 # public static folder for nginx
 # tail -222 /var/log/nginx/error.log
 sudo mkdir -p /www-data/staticroot/
+sudo mv staticroot/* /www-data/staticroot/
 sudo chown -R www-data:www-data /www-data/
 # https://superuser.com/a/1563652
 sudo find /www-data/ -type d -exec chmod 755 {} \;
