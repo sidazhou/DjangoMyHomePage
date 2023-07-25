@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Best Page In The Universe</title>
-    <link rel="shortcut icon" href="/images/about_censorship.ico">
+    <link rel="shortcut icon" href="{% static 'images/about_censorship.ico' %}">
     <!-- Should not use normalize.css with bootstrap -->
     <!-- Bootstrap: Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
@@ -16,16 +16,583 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"> -->
 
     <!--
-      home.css is where you put your styles
+      application.css is where you put your styles
     -->
-    <link rel="stylesheet" href="{% static 'home.css' %}">
-
+    <link rel="stylesheet" href="{% static 'stylesheets/application.css' %}">
   </head>
 
   <body>
 
 
-    <h1>yield</h1>
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+            <!-- <img src="{% static 'images/top_left.png' %}" alt=""> -->
+            <img src="{% static 'images/top_left.png' %}" alt="">
+
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form class="navbar-form navbar-left" role="search" id="search_form" name="input" action="/search" method="post">
+            <div class="form-group">
+              <input type="text" name="searched_str" class="form-control" placeholder="Search for knowledge and truths">
+            </div>
+            <button type="submit" class="btn btn-default">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </form>
+
+          <ul class="nav navbar-nav navbar-right"  style="padding-right:0px">
+          <li>
+            <div class="panel-body">
+              Sida Zhou
+            </div>
+          </li>
+
+          <li>
+          <!-- <a class="sd_goto_home"> -->
+
+            <div class="panel-body" style="padding-left:0px">
+              <button class="sd_goto_home" > Home  </button>
+            </div>
+          <!-- </a> -->
+          </li>
+
+            <li>
+                <img src="{% static 'images/top_right.png' %}" alt="">
+
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+
+
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+  </div>
+</div> <!-- .row -->
+
+<div class="row">
+<div class="col-md-2">
+
+<!-- http://www.bootply.com/uBoT3zP1P2 -->
+
+<!-- http://stackoverflow.com/questions/18432577/stacked-tabs-in-bootstrap-3 -->
+    <ul class="nav nav-pills nav-stacked" id="myTabs">
+      <li class="active"><a href="#tab_am">About me</a></li>
+      <li><a href="#tab_p">Projects (Web)</a></li>
+      <li><a href="#tab_ps">Projects (Science)</a></li>
+      <li><a href="#tab_m">Contact me</a></li>
+    </ul>
+
+
+            <div class="panel-body well">
+              <img src="{% static 'images/sidazhou.png' %}" alt="" width="120px" class="img-responsive img-rounded">
+
+              <hr style="margin: 2px 0;">
+              <b>Email</b><br>
+              sidazhou@gmail.com<br>
+              <hr style="margin: 2px 0;">
+
+              <b>Phone</b><br>
+              +1 778 321 7954<br>
+              <hr style="margin: 2px 0;">
+            </div>
+
+
+
+</div>
+
+
+
+<div class="col-md-10">
+
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab_am">
+        <div class="jumbotron">
+
+
+        <p>Profile: </p>
+        <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+        <script type="IN/MemberProfile" data-id="https://www.linkedin.com/pub/sida-zhou/69/766/42b" data-format="inline" data-related="false" data-width="400"></script>
+        <br>
+
+        &nbsp;&nbsp;&nbsp;<a href="https://www.dropbox.com/s/9sc6ye4ni5rqgsd/Sida_Zhou_resume_lhl.pdf?dl=0">
+             <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> My Resume</button>
+        </a>
+        <br>
+
+        <hr width="100%" style="margin: 10px 0;">
+        <p>Projects (web): </p>
+
+        <div class="row">
+          <div class="col-md-4">
+            <a href="#" class="thumbnail sd_goto_tp_s1">
+              <img src="{% static 'images/sd-youtube' %}-project.png" alt="..." />
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a href="#" class="thumbnail sd_goto_tp_s2">
+              <img src="{% static 'images/sd-askme' %}-project.png" alt="..." />
+            </a>
+          </div>
+
+
+           <div class="col-md-4">
+            <a href="#" class="thumbnail sd_goto_tp_s3">
+              <img src="{% static 'images/onlinepostit.png' %}" alt="..." />
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a href="#" class="thumbnail sd_goto_tp_s4">
+              <img src="{% static 'images/fullroster.png' %}" alt="..." />
+            </a>
+          </div>
+
+         <div class="col-md-4">
+            <a href="#" class="thumbnail sd_goto_tp_s5">
+              <img src="{% static 'images/klue.png' %}" alt="..."/>
+            </a>
+          </div>
+        </div> <!-- row -->
+
+        <hr width="100%" style="margin: 10px 0;">
+
+        <p>Projects (science): </p>
+
+        <div class="row">
+          <div class="col-md-4">
+            <a href="#" class="thumbnail sd_goto_tps_s1">
+              <img src="{% static 'images/projects_science/particle' %}-simul-flow-chart.png" alt="..." />
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a href="#" class="thumbnail sd_goto_tps_s2">
+              <img src="{% static 'images/projects_science/sdScope_Labview_frontend' %}.png" alt="..." />
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a href="#" class="thumbnail sd_goto_tps_s3">
+              <img src="{% static 'images/projects_science/ch3' %}-rempi-fig.png" alt="..." />
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a href="#" class="thumbnail sd_goto_tps_s4">
+              <img src="{% static 'images/projects_science/coil_simul' %}.png" alt="..." />
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a href="#" class="thumbnail sd_goto_tps_s5">
+              <img src="{% static 'images/projects_science/thesis' %}.png" alt="..." />
+            </a>
+          </div>
+
+<!--           <div class="col-md-4">
+            <a href="#" class="thumbnail sd_goto_tps_s5">
+              <img src="{% static 'images/projects_science/thesis' %}.png" alt="..." />
+            </a>
+          </div> -->
+        </div> <!-- row -->
+
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="tab-pane" id="tab_p">
+        <div class="jumbotron">
+
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab"><b>Anti-Spoiler YouTube</b></a></li>
+            <li><a href="#tab2" data-toggle="tab"><b>Ask Sida</b></a></li>
+             <li><a href="#tab3" data-toggle="tab"><b>Online Post It</b></a></li>
+            <li><a href="#tab4" data-toggle="tab"><b>Dashboard Module</b></a></li>
+           <li><a href="#tab5" data-toggle="tab"><b>Web components</b></a></li>
+<!--            <li><a href="#tab5" data-toggle="tab"><b>tab5</b></a></li> -->
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+            <br>
+            <p> An anti-spoiler site when watching tournament VODs on YouTube. </p>
+             The site bundles all games in the same series, so that winners of bo3s and bo5s cannot be deduced from number of games found by YouTube.
+             The site also hides YouTube progress bar, so that winner of a game cannot be deduced from the length of the game.
+             <br>
+             (The site is powered by YouTube API, Sinatra, Heroku, Bootstrap) <br> <br>
+             <a href="https://sd-youtube-project.herokuapp.com/show-me-groups">
+             <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to site</button>
+             </a>
+             <hr width="100%" style="margin: 5px 0;">
+
+              <img src="{% static 'images/sd-youtube' %}-project.png" width="70%" alt="" class="well"> <br>
+
+             <a href="https://sd-youtube-project.herokuapp.com/show-me-groups">
+             <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to site</button>
+             </a>
+            </div>
+
+
+            <div class="tab-pane" id="tab2">
+            <br>
+              <p> Better than Google, Ask Sida will allow you to get answers directly from Sida himself</p>
+              Messages go directly into Sida's personal inbox. Check back daily for Sida's personal and philosophical responses to difficult everyday life questions.
+             <br>
+             (The site is powered by SendGrid API, HTML forms, Sinatra, Heroku, Bootstrap) <br> <br>
+
+             <a href="https://sd-askme-project.herokuapp.com/">
+             <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to site</button>
+             </a>
+             <hr width="100%" style="margin: 5px 0;">
+
+              <img src="{% static 'images/sd-askme' %}-project.png" width="70%" alt="" class="well"> <br>
+
+             <a href="https://sd-askme-project.herokuapp.com/show-me-groups">
+             <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to site</button>
+             </a>
+            </div>
+
+
+            <div class="tab-pane" id="tab3">
+            <br>
+              <p>Free online post it notes for everyday use, quick and simple!</p>
+              Accessible from everywhere, sharable with anyone!
+             <br>
+             (The site is powered by interact.js, JQuery, PostgreSQL, Sinatra) <br> <br>
+
+             <a href="http://onlinepostit.herokuapp.com">
+             <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to site</button>
+             </a>
+             <hr width="100%" style="margin: 5px 0;">
+
+              <img src="{% static 'images/onlinepostit.png' %}" width="70%" alt="" class="well"> <br>
+
+             <a href="http://onlinepostit.herokuapp.com">
+             <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to site</button>
+             </a>
+            </div>
+
+
+            <div class="tab-pane" id="tab4">
+            <br>
+              <p> Dashboard module for www.fullroster.ca </p>
+                A dashboard module which acts as a premium service to organizers of
+                larger events. The event organizer can easily manage the registrations,
+                messaging and payments. <br>
+                The module is customized for a particular client, and it supports company invites, organizing
+                player registration into teams, sports and divisions.
+
+                There are different levels of access restrictions, divided between event organizers point of view, and invited guest companies point of view.
+             <br>
+             (The site is powered by Ruby on Rails, ActiveRecord, jQuery, JavaScript, HTML/CSS) <br> <br>
+
+             <a href="http://sd-fullroster-project.herokuapp.com">
+             <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to site</button>
+             </a>
+             <hr width="100%" style="margin: 5px 0;">
+
+              <img src="{% static 'images/fullroster.png' %}" width="70%" alt="" class="well"> <br>
+
+             <a href="http://sd-fullroster-project.herokuapp.com">
+             <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to site</button>
+             </a>
+            </div>
+
+
+            <div class="tab-pane" id="tab5">
+            <br>
+              <p> Web components for www.klue.in </p>
+                Full stack web development. Enhanced the existing user commenting system to send out HTML notification emails when a user’s name is mentioned. Built different APIs to serve JSON data. Utilized external APIs to build React components. Klue labs is a local Vancouver startup that is in the field of business intelligence.
+             <br>
+             (Technologies used: Ruby on Rails, React.js, emails, APIs) <br> <br>
+
+             <hr width="100%" style="margin: 5px 0;">
+
+              <img src="{% static 'images/klue.png' %}" width="70%" alt="" class="well"> <br>
+
+              <p>More info available upon request</p>
+            </div>
+
+<!--
+            <div class="tab-pane" id="tab5">
+            <br>
+              <p> title </p>
+              descriptions....  descriptions....  descriptions....  descriptions....  descriptions....  descriptions....  descriptions....  descriptions....  descriptions....  descriptions....
+             <br>
+             (The site is powered by [] [] [] [] [] []) <br> <br>
+
+             <a href="#">
+             <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to site</button>
+             </a>
+             <hr width="100%" style="margin: 5px 0;">
+
+              <img src="http://placehold.it/400x200" width="70%" alt="" class="well"> <br>
+
+             <a href="#show-me-groups">
+             <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to site</button>
+             </a>
+            </div> -->
+          </div>
+
+        </div>
+      </div> <!-- <div class="tab-pane" id="tab_p"> -->
+
+
+
+
+
+
+      <div class="tab-pane" id="tab_ps">
+        <div class="jumbotron">
+
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#ps_tab1" data-toggle="tab"><b>Molecular Dynamics simulation</b></a></li>
+            <li><a href="#ps_tab2" data-toggle="tab"><b>Control panel</b></a></li>
+            <li><a href="#ps_tab3" data-toggle="tab"><b>AMO caculations</b></a></li>
+            <li><a href="#ps_tab4" data-toggle="tab"><b>Magnetic field simulation</b></a></li>
+            <li><a href="#ps_tab5" data-toggle="tab"><b>PhD Thesis</b></a></li>
+          </ul>
+
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="ps_tab1">
+            <br>
+            <p> Molecular Dynamics simulation of particles in a Zeeman Decelerator</p>
+             Particles with magnetic moment flies through free space, and its trajectory is affected by time-varying magnetic field. The simulation is used to calculate parameters that need to be set in the experiments. The simulation plays a central role in the analysis of experimental data.
+             <br>
+             (Technologies used: RK4, MATLAB, MATLAB parallel computing toolbox, WestGrid, Poisson Superfish, COMSOL) <br> <br>
+
+             <hr width="100%" style="margin: 5px 0;">
+              <p>Flowchart:</p>
+              <img src="{% static 'images/projects_science/particle' %}-simul-flow-chart.png" width="70%" alt="" class="well"> <br>
+             <hr width="100%" style="margin: 5px 0;">
+              <p>Simulation results:</p>
+              <img src="{% static 'images/projects_science/lfs_hfs' %}.png" width="70%" alt="" class="well"> <br>
+              <p>More info available upon request</p>
+            </div>
+
+
+            <div class="tab-pane" id="ps_tab2">
+            <br>
+              <p> Labview control panel for physics experiment</p>
+              The control panel sets experimental parameters, monitors errors occuring during the run of the experiment, and write analysis-ready pre-processed data directly to the hard drive. The control panels handles user generated events.
+             <br>
+             (Technologies used: LabView, AlazarTech PC-scope drivers) <br>
+             (Design patterns: state machines, master-slave) <br> <br>
+
+             <hr width="100%" style="margin: 5px 0;">
+              <p>Front-end:</p>
+              <img src="{% static 'images/projects_science/sdScope_Labview_frontend' %}.png" width="70%" alt="" class="well"> <br>
+             <hr width="100%" style="margin: 5px 0;">
+              <p>Back-end:</p>
+              <img src="{% static 'images/projects_science/sdScope_Labview_backend' %}.png" width="70%" alt="" class="well"> <br>
+              <p>More info available upon request</p>
+
+            </div>
+
+
+            <div class="tab-pane" id="ps_tab3">
+            <br>
+            <p> REMPI spectra calculation </p>
+             REMPI (Resonance Enhanced Multi-Photon Ionization) calculation uses transition intensities and transition frequencies from literature. Final simulation of experimental data is obtained by combining this REMPI calcultion with the result of the Molecular Dynamics simulation.
+             <br>
+             (Physics used: adv quantum mechanics, angular momemtum theory, molecular symmetry) <br> <br>
+
+             <hr width="100%" style="margin: 5px 0;">
+              <p>Starting with this equation ... :</p>
+              <img src="{% static 'images/projects_science/ch3' %}-rempi-eqn.png" width="70%" alt="" class="well"> <br>
+              <p>... converting physics model to calculations in MATLAB ... :</p>
+
+              <pre><code>function CH3REMPI()
+
+                  global T_n; T_n = 70  *0.69503 ; % Kelvin % rot temperature
+                  global maxNpp; maxNpp = 5; % max number of basis %5
+                  global Unknown_FoverE_var; Unknown_FoverE_var=0;
+                  maxNpBasis=20;  %8 %20
+                  maxNppBasis=20; %8 %20
+                  sdTitle=[num2str(T_n/0.69503) 'Kelvin'];
+
+
+                  sdBasis=GetBasis(maxNpBasis,maxNppBasis); %[deltaN Np Npp K frequency intensity]
+
+                  % Update sdBasis with freq and intensirt values
+                  for i=1:size(sdBasis,1) % for each row
+                      deltaN=sdBasis(i,1);
+                      Np = sdBasis(i,2);
+                      Npp= sdBasis(i,3);
+                      K  = sdBasis(i,4);
+
+                      frequency   = GetFrequency(Np,Npp,K);
+                      [population intensity]   = GetPopulationNIntensity(Np,Npp,K);
+                      energy   = E(Npp,K);
+                  %     intensity=ApplySelectionRule(deltaN,K)*intensity;
+
+                      sdBasis(i,5) = frequency;
+                      sdBasis(i,6) = population;
+                      sdBasis(i,7) = intensity;
+                      sdBasis(i,8) = energy;
+                  end
+              ....
+              ....
+              ....
+              </code> </pre>
+
+            <br>
+              <p>... to get meaningful results/graphs:</p>
+              <img src="{% static 'images/projects_science/ch3' %}-rempi-fig.png" width="70%" alt="" class="well"> <br>
+
+              <p>More info available upon request</p>
+            </div>
+
+            <div class="tab-pane" id="ps_tab4">
+            <br>
+              <p> Magnetic field simulations of 3D geometries/components from the experiment </p>
+              The simulation was able to be reduced into 2D cylindrical symmetry, which simplified the problem and shortened the running time. Field simulations influenced the next generation design of the experiment.
+             <br>
+             (Technologies used: Poisson Superfish, MATLAB, COMSOL) <br><br>
+
+             <hr width="70%" style="margin: 5px 0;">
+              <p>Induced magnet (shielded):</p>
+              <img src="{% static 'images/projects_science/coil_simul' %}.png" width="50%" alt="" class="well"> <br>
+             <hr width="70%" style="margin: 5px 0;">
+              <p>Hexapole magnetic guide:</p>
+              <img src="{% static 'images/projects_science/magnetic_guide' %}.png" width="50%" alt="" class="well"> <br>
+              <p>More info available upon request</p>
+
+            </div>
+
+
+            <div class="tab-pane" id="ps_tab5">
+            <br>
+            <p> Title: </p>
+             <b>Zeeman Deceleration of Methyl Radical</b>
+             <br>
+             <br>
+             <hr width="100%" style="margin: 5px 0;">
+            <p> Abstract: </p>
+            Conventional Zeeman decelerator, consisting of 80 stages, was constructed and tested. The experimental setup was characterized using O₂ as the reference molecule. Known results of deceleration of O₂ were reproduced. As an extension, detailed REMPI analysis of deceleration of O₂ was carried out, this REMPI analysis was conducted in parallel with ref [1]. Numerical simulation was successful in reproducing the TOF and REMPI spectra of deceleration of O₂. <br>
+
+             The extension of using Zeeman decelerator to decelerate a polyatomic radical, CH₃, was successful: from initial velocity of 480m/s to a final velocity of 368m/s, corresponding to a removal of 41.2% of the initial translational energy. The decelerator’s efficiency at final velocity of 368m/s is around ~10%. The limiting factor of further deceleration is the signal to noise ratio. Hence, optimization of DC discharge conditions of CH₃ were attempted, but the attempt was with limited success.
+
+           <br>
+           <br>
+
+             <a href="https://circle.ubc.ca/handle/2429/46692">
+               <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to thesis</button>
+             </a>
+
+             <hr width="100%" style="margin: 5px 0;">
+            <p> Publications: </p>
+             <b>Manipulation of translational motion of methyl radicals by pulsed magnetic fields</b> <br>
+             Control of the translational motion of methyl radicals is demonstrated by using pulsed magnetic fields created by a series of solenoid coils. By synchronously switching the magnetic fields corresponding to the motion of the radicals, we have observed the deceleration and focusing of a supersonic radical beam. The present result shows that Zeeman deceleration of polyatomic free radicals in the doublet state can be realized. This opens possibilities for trapping cold polyatomic free radicals in a spatially confined area leading to further studies of cold collisions and reactions. <br>
+             <a href="http://pubs.rsc.org/en/content/articlelanding/2013/cp/c2cp43796a">
+               <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to paper</button>
+             </a>
+
+            </div>
+
+          </div>  <!--  class="tab-content" -->
+
+        </div>
+      </div> <!-- <div class="tab-pane" id="tab_p"> -->
+
+
+
+
+
+
+
+      <div class="tab-pane" id="tab_m">
+        <div class="jumbotron">
+              <hr width="100%" style="margin: 2px 0;"> <br>
+              <b>Email</b><br>
+              sidazhou@gmail.com<br>
+              <hr width="33%" style="margin: 2px 0;">
+
+              <b>Phone</b><br>
+              +1 778 321 7954<br>
+              <hr width="33%" style="margin: 2px 0;">
+
+              <b>GitHub</b><br>
+              <a href="http://github.com/sidazhou">http://github.com/sidazhou </a><br>
+              <hr width="33%" style="margin: 2px 0;">
+
+              <b>Stack Overflow</b><br>
+              <a href="http://stackoverflow.com/users/2202107/sida-zhou">http://stackoverflow.com/users/2202107/sida-zhou</a><br>
+              <hr width="33%" style="margin: 2px 0;">
+
+
+              <b>LinkedIn</b><br>
+              <a href="http://ca.linkedin.com/pub/sida-zhou/69/766/42b">http://ca.linkedin.com/pub/sida-zhou/69/766/42b </a><br>
+              <hr width="33%" style="margin: 2px 0;">
+
+              <div notes="hidden" style="color:white;">
+                <b>Facebook</b><br>
+                http://www.facebook.com/sidazhou
+                <hr width="33%" style="margin: 2px 0;">
+
+                <b>WordPress</b><br>
+                http://sidazhou.wordpress.com/
+                <hr width="33%" style="margin: 2px 0;">
+              </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+</div> <!-- .row -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -36,7 +603,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
     <!-- Custom scripts -->
-    <script src="{% static 'home.js' %}"></script>
+    <script src="{% static 'javascript/application.js' %}"></script>
 
   </body>
 </html>
