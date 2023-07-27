@@ -1,5 +1,8 @@
+{% extends "layout.html" %}
 {% load static %}
 
+
+{% block application %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -113,7 +116,7 @@
               <hr style="margin: 2px 0;">
 
               <b>Phone</b><br>
-              +1 778 321 7954<br>
+              +86 185 1065 1801<br>
               <hr style="margin: 2px 0;">
             </div>
 
@@ -142,39 +145,29 @@
         <br>
 
         <hr width="100%" style="margin: 10px 0;">
+        <p>Projects (datasci): </p>
+
+        <div class="row">
+          {% for datasci_project in datasci_projects %}
+            <div class="col-md-4">
+              <a href="#" class="thumbnail sd_goto_tp_s1">
+                <img src="{% static datasci_project.thumb_url %}" alt="..." />
+              </a>
+            </div>
+          {% endfor %}
+
+        <hr width="100%" style="margin: 10px 0;">
         <p>Projects (web): </p>
 
         <div class="row">
-          <div class="col-md-4">
-            <a href="#" class="thumbnail sd_goto_tp_s1">
-              <img src="{% static 'images/sd-youtube' %}-project.png" alt="..." />
-            </a>
-          </div>
+          {% for web_project in web_projects %}
+            <div class="col-md-4">
+              <a href="#" class="thumbnail sd_goto_tp_s1">
+                <img src="{% static web_project.thumb_url %}" alt="..." />
+              </a>
+            </div>
+          {% endfor %}
 
-          <div class="col-md-4">
-            <a href="#" class="thumbnail sd_goto_tp_s2">
-              <img src="{% static 'images/sd-askme' %}-project.png" alt="..." />
-            </a>
-          </div>
-
-
-           <div class="col-md-4">
-            <a href="#" class="thumbnail sd_goto_tp_s3">
-              <img src="{% static 'images/onlinepostit.png' %}" alt="..." />
-            </a>
-          </div>
-
-          <div class="col-md-4">
-            <a href="#" class="thumbnail sd_goto_tp_s4">
-              <img src="{% static 'images/fullroster.png' %}" alt="..." />
-            </a>
-          </div>
-
-         <div class="col-md-4">
-            <a href="#" class="thumbnail sd_goto_tp_s5">
-              <img src="{% static 'images/klue.png' %}" alt="..."/>
-            </a>
-          </div>
         </div> <!-- row -->
 
         <hr width="100%" style="margin: 10px 0;">
@@ -182,41 +175,13 @@
         <p>Projects (science): </p>
 
         <div class="row">
-          <div class="col-md-4">
-            <a href="#" class="thumbnail sd_goto_tps_s1">
-              <img src="{% static 'images/projects_science/particle' %}-simul-flow-chart.png" alt="..." />
-            </a>
-          </div>
-
-          <div class="col-md-4">
-            <a href="#" class="thumbnail sd_goto_tps_s2">
-              <img src="{% static 'images/projects_science/sdScope_Labview_frontend' %}.png" alt="..." />
-            </a>
-          </div>
-
-          <div class="col-md-4">
-            <a href="#" class="thumbnail sd_goto_tps_s3">
-              <img src="{% static 'images/projects_science/ch3' %}-rempi-fig.png" alt="..." />
-            </a>
-          </div>
-
-          <div class="col-md-4">
-            <a href="#" class="thumbnail sd_goto_tps_s4">
-              <img src="{% static 'images/projects_science/coil_simul' %}.png" alt="..." />
-            </a>
-          </div>
-
-          <div class="col-md-4">
-            <a href="#" class="thumbnail sd_goto_tps_s5">
-              <img src="{% static 'images/projects_science/thesis' %}.png" alt="..." />
-            </a>
-          </div>
-
-<!--           <div class="col-md-4">
-            <a href="#" class="thumbnail sd_goto_tps_s5">
-              <img src="{% static 'images/projects_science/thesis' %}.png" alt="..." />
-            </a>
-          </div> -->
+          {% for science_project in science_projects %}
+            <div class="col-md-4">
+              <a href="#" class="thumbnail sd_goto_tps_s1">
+                <img src="{% static science_project.thumb_url %}" alt="..." />
+              </a>
+            </div>
+          {% endfor %}
         </div> <!-- row -->
 
 
@@ -538,7 +503,7 @@
               <hr width="33%" style="margin: 2px 0;">
 
               <b>Phone</b><br>
-              +1 778 321 7954<br>
+              +86 185 1065 1801<br>
               <hr width="33%" style="margin: 2px 0;">
 
               <b>GitHub</b><br>
@@ -580,30 +545,4 @@
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-
-    <!-- Bootstrap: Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
-    <!-- Custom scripts -->
-    <script src="{% static 'javascript/application.js' %}"></script>
-
-  </body>
-</html>
+{% endblock application %}

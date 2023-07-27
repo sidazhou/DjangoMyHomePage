@@ -11,6 +11,9 @@ WORKDIR $WORKDIR
 ADD requirements.txt ./
 RUN pip install -r requirements.txt
 
+# https://stackoverflow.com/questions/65301487/django-with-docker-stuck-on-watching-for-file-changes-with-statreloader
+ENV PYTHONUNBUFFERED=1
+
 EXPOSE 8000
 EXPOSE 8080
 
