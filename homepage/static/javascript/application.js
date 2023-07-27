@@ -7,95 +7,48 @@ $(window).load(function() { // this will fire after the entire page is loaded, i
     });
 });
 
+
 $(document).ready(function() {
-
-
-
   $('#myTabs a').click(function (e) {
     e.preventDefault();
     $(this).tab('show');
   });
 
+
+  $(".sd_goto_landing").click(function (e) {
+    e.preventDefault();
+    $( "a[href='#tab_landing']" ).trigger( "click" );
+  });
+
   // debugger;
 
 
-
-
-
-  $(".sd_goto_tp_s1").click(function (e) {
+// datasci
+for (let ind = 1; ind <= 10; ind++) {
+  $(".sd_goto_ds"+ind).click(function (e) {
     e.preventDefault();
-    $( "a[href='#tab_p']" ).trigger( "click" );
-    $( "a[href='#tab1']" ).trigger( "click" );
+    $( "a[href='#tab_datasci']" ).trigger( "click" );
+    $( "a[href='#tab"+ind+"']" ).trigger( "click" );
   });
+}
 
-  $(".sd_goto_tp_s2").click(function (e) {
+// web
+for (let ind = 1; ind <= 10; ind++) {
+  $(".sd_goto_w"+ind).click(function (e) {
     e.preventDefault();
-    $( "a[href='#tab_p']" ).trigger( "click" );
-    $( "a[href='#tab2']" ).trigger( "click" );
+    $( "a[href='#tab_web']" ).trigger( "click" );
+    $( "a[href='#tab"+ind+"']" ).trigger( "click" );
   });
+}
 
-  $(".sd_goto_tp_s3").click(function (e) {
+// science
+for (let ind = 1; ind <= 10; ind++) {
+  $(".sd_goto_s"+ind).click(function (e) {
     e.preventDefault();
-    $( "a[href='#tab_p']" ).trigger( "click" );
-    $( "a[href='#tab3']" ).trigger( "click" );
+    $( "a[href='#tab_science']" ).trigger( "click" );
+    $( "a[href='#tab"+ind+"']" ).trigger( "click" );
   });
-
-  $(".sd_goto_tp_s4").click(function (e) {
-    e.preventDefault();
-    $( "a[href='#tab_p']" ).trigger( "click" );
-    $( "a[href='#tab4']" ).trigger( "click" );
-  });
-
-  $(".sd_goto_tp_s5").click(function (e) {
-    e.preventDefault();
-    $( "a[href='#tab_p']" ).trigger( "click" );
-    $( "a[href='#tab5']" ).trigger( "click" );
-  });
-
-  // $(".sd_goto_tp_s5").click(function (e) {
-  //   e.preventDefault();
-  //   $( "a[href='#tab_p']" ).trigger( "click" );
-  //   $( "a[href='#tab5']" ).trigger( "click" );
-  // });
-
-
-  $(".sd_goto_tps_s1").click(function (e) {
-    e.preventDefault();
-    $( "a[href='#tab_ps']" ).trigger( "click" );
-    $( "a[href='#ps_tab1']" ).trigger( "click" );
-  });
-
-  $(".sd_goto_tps_s2").click(function (e) {
-    e.preventDefault();
-    $( "a[href='#tab_ps']" ).trigger( "click" );
-    $( "a[href='#ps_tab2']" ).trigger( "click" );
-  });
-
-  $(".sd_goto_tps_s3").click(function (e) {
-    e.preventDefault();
-    $( "a[href='#tab_ps']" ).trigger( "click" );
-    $( "a[href='#ps_tab3']" ).trigger( "click" );
-  });
-
-  $(".sd_goto_tps_s4").click(function (e) {
-    e.preventDefault();
-    $( "a[href='#tab_ps']" ).trigger( "click" );
-    $( "a[href='#ps_tab4']" ).trigger( "click" );
-  });
-
-  $(".sd_goto_tps_s5").click(function (e) {
-    e.preventDefault();
-    $( "a[href='#tab_ps']" ).trigger( "click" );
-    $( "a[href='#ps_tab5']" ).trigger( "click" );
-  });
-
-
-
-
-  $(".sd_goto_home").click(function (e) {
-    e.preventDefault();
-    $( "a[href='#tab_am']" ).trigger( "click" );
-  });
+}
 
 });
 

@@ -21,7 +21,8 @@ body {
 
 .jumbotron {
   background-color: white;
-  height: 600px;  
+/*  height: 600px;  */
+  min-height: 600px;
   overflow: auto;
 }
 
@@ -45,7 +46,7 @@ padding-right: 1px;
 text-shadow: 0 -1px rgba(0, 0, 0, .5);
 }
 
-button.sd_goto_home {
+button.sd_goto_landing {
   background-color: transparent;
   border: none;
   padding: 0;

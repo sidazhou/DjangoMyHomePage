@@ -69,10 +69,10 @@
           </li>
 
           <li>
-          <!-- <a class="sd_goto_home"> -->
+          <!-- <a class="sd_goto_landing"> -->
 
             <div class="panel-body" style="padding-left:0px">
-              <button class="sd_goto_home" > Home  </button>
+              <button class="sd_goto_landing" > Home  </button>
             </div>
           <!-- </a> -->
           </li>
@@ -100,10 +100,11 @@
 
 <!-- http://stackoverflow.com/questions/18432577/stacked-tabs-in-bootstrap-3 -->
     <ul class="nav nav-pills nav-stacked" id="myTabs">
-      <li class="active"><a href="#tab_am">About me</a></li>
-      <li><a href="#tab_p">Projects (Web)</a></li>
-      <li><a href="#tab_ps">Projects (Science)</a></li>
-      <li><a href="#tab_m">Contact me</a></li>
+      <li class="active"><a href="#tab_landing">About me</a></li>
+      <li><a href="#tab_datasci">Projects (Datasci)</a></li>
+      <li><a href="#tab_web">Projects (Web)</a></li>
+      <li><a href="#tab_science">Projects (Science)</a></li>
+      <li><a href="#tab_contactme">Contact me</a></li>
     </ul>
 
 
@@ -130,7 +131,7 @@
 
 
     <div class="tab-content">
-      <div class="tab-pane active" id="tab_am">
+      <div class="tab-pane active" id="tab_landing">
         <div class="jumbotron">
 
 
@@ -150,7 +151,7 @@
         <div class="row">
           {% for datasci_project in datasci_projects %}
             <div class="col-md-4">
-              <a href="#" class="thumbnail sd_goto_tp_s1">
+              <a href="#" class="thumbnail sd_goto_ds{{ datasci_project.id }}">
                 <img src="{% static datasci_project.thumb_url %}" alt="..." />
               </a>
             </div>
@@ -163,7 +164,7 @@
         <div class="row">
           {% for web_project in web_projects %}
             <div class="col-md-4">
-              <a href="#" class="thumbnail sd_goto_tp_s1">
+              <a href="#" class="thumbnail sd_goto_w{{ web_project.id }}">
                 <img src="{% static web_project.thumb_url %}" alt="..." />
               </a>
             </div>
@@ -178,7 +179,7 @@
         <div class="row">
           {% for science_project in science_projects %}
             <div class="col-md-4">
-              <a href="#" class="thumbnail sd_goto_tps_s1">
+              <a href="#" class="thumbnail sd_goto_s{{ science_project.id }}">
                 <img src="{% static science_project.thumb_url %}" alt="..." />
               </a>
             </div>
@@ -195,7 +196,7 @@
 
 
 
-      <div class="tab-pane" id="tab_p">
+      <div class="tab-pane" id="tab_web">
         <div class="jumbotron">
 
           <ul class="nav nav-tabs">
@@ -204,7 +205,7 @@
              <li><a href="#tab3" data-toggle="tab"><b>Online Post It</b></a></li>
             <li><a href="#tab4" data-toggle="tab"><b>Dashboard Module</b></a></li>
            <li><a href="#tab5" data-toggle="tab"><b>Web components</b></a></li>
-<!--            <li><a href="#tab5" data-toggle="tab"><b>tab5</b></a></li> -->
+
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab1">
@@ -329,27 +330,28 @@
           </div>
 
         </div>
-      </div> <!-- <div class="tab-pane" id="tab_p"> -->
+      </div> <!-- <div class="tab-pane" id="tab_web"> -->
 
 
 
 
 
 
-      <div class="tab-pane" id="tab_ps">
+      <div class="tab-pane" id="tab_science">
         <div class="jumbotron">
 
           <ul class="nav nav-tabs">
-            <li class="active"><a href="#ps_tab1" data-toggle="tab"><b>Molecular Dynamics simulation</b></a></li>
-            <li><a href="#ps_tab2" data-toggle="tab"><b>Control panel</b></a></li>
-            <li><a href="#ps_tab3" data-toggle="tab"><b>AMO caculations</b></a></li>
-            <li><a href="#ps_tab4" data-toggle="tab"><b>Magnetic field simulation</b></a></li>
-            <li><a href="#ps_tab5" data-toggle="tab"><b>PhD Thesis</b></a></li>
+            <li class="active"><a href="#tab1" data-toggle="tab"><b>Molecular Dynamics simulation</b></a></li>
+            <li><a href="#tab2" data-toggle="tab"><b>Control panel</b></a></li>
+            <li><a href="#tab3" data-toggle="tab"><b>AMO caculations</b></a></li>
+            <li><a href="#tab4" data-toggle="tab"><b>Magnetic field simulation</b></a></li>
+            <li><a href="#tab5" data-toggle="tab"><b>PhD Thesis</b></a></li>
+            <li><a href="#tab6" data-toggle="tab"><b>Publicatinos</b></a></li>
           </ul>
 
 
           <div class="tab-content">
-            <div class="tab-pane active" id="ps_tab1">
+            <div class="tab-pane active" id="tab1">
             <br>
             <p> Molecular Dynamics simulation of particles in a Zeeman Decelerator</p>
              Particles with magnetic moment flies through free space, and its trajectory is affected by time-varying magnetic field. The simulation is used to calculate parameters that need to be set in the experiments. The simulation plays a central role in the analysis of experimental data.
@@ -366,7 +368,7 @@
             </div>
 
 
-            <div class="tab-pane" id="ps_tab2">
+            <div class="tab-pane" id="tab2">
             <br>
               <p> Labview control panel for physics experiment</p>
               The control panel sets experimental parameters, monitors errors occuring during the run of the experiment, and write analysis-ready pre-processed data directly to the hard drive. The control panels handles user generated events.
@@ -385,7 +387,7 @@
             </div>
 
 
-            <div class="tab-pane" id="ps_tab3">
+            <div class="tab-pane" id="tab3">
             <br>
             <p> REMPI spectra calculation </p>
              REMPI (Resonance Enhanced Multi-Photon Ionization) calculation uses transition intensities and transition frequencies from literature. Final simulation of experimental data is obtained by combining this REMPI calcultion with the result of the Molecular Dynamics simulation.
@@ -438,7 +440,7 @@
               <p>More info available upon request</p>
             </div>
 
-            <div class="tab-pane" id="ps_tab4">
+            <div class="tab-pane" id="tab4">
             <br>
               <p> Magnetic field simulations of 3D geometries/components from the experiment </p>
               The simulation was able to be reduced into 2D cylindrical symmetry, which simplified the problem and shortened the running time. Field simulations influenced the next generation design of the experiment.
@@ -456,7 +458,7 @@
             </div>
 
 
-            <div class="tab-pane" id="ps_tab5">
+            <div class="tab-pane" id="tab5">
             <br>
             <p> Title: </p>
              <b>Zeeman Deceleration of Methyl Radical</b>
@@ -488,7 +490,7 @@
           </div>  <!--  class="tab-content" -->
 
         </div>
-      </div> <!-- <div class="tab-pane" id="tab_p"> -->
+      </div> <!-- <div class="tab-pane" id="tab_web"> -->
 
 
 
@@ -496,7 +498,7 @@
 
 
 
-      <div class="tab-pane" id="tab_m">
+      <div class="tab-pane" id="tab_contactme">
         <div class="jumbotron">
               <hr width="100%" style="margin: 2px 0;"> <br>
               <b>Email</b><br>
