@@ -28,7 +28,7 @@ for (let ind = 1; ind <= 10; ind++) {
   $(".sd_goto_ds"+ind).click(function (e) {
     e.preventDefault();
     $( "a[href='#tab_datasci']" ).trigger( "click" );
-    $( "a[href='#tab"+ind+"']" ).trigger( "click" );
+    $( "a[href='#tab_ds"+ind+"']" ).trigger( "click" );
   });
 }
 
@@ -37,7 +37,7 @@ for (let ind = 1; ind <= 10; ind++) {
   $(".sd_goto_w"+ind).click(function (e) {
     e.preventDefault();
     $( "a[href='#tab_web']" ).trigger( "click" );
-    $( "a[href='#tab"+ind+"']" ).trigger( "click" );
+    $( "a[href='#tab_w"+ind+"']" ).trigger( "click" );
   });
 }
 
@@ -46,7 +46,7 @@ for (let ind = 1; ind <= 10; ind++) {
   $(".sd_goto_s"+ind).click(function (e) {
     e.preventDefault();
     $( "a[href='#tab_science']" ).trigger( "click" );
-    $( "a[href='#tab"+ind+"']" ).trigger( "click" );
+    $( "a[href='#tab_s"+ind+"']" ).trigger( "click" );
   });
 }
 
