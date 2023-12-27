@@ -1,0 +1,172 @@
+# id=1 will show at default
+
+- id:        "1"
+  title:     "weibo recommender engine"
+  thumb_url: "images/projects/datasci/thumb/weibo_overview.png"
+  html_body: |
+        <br>
+        <p> Data scientist for core recommendation engine </p>
+        <br> - I was part of the core recommendation engines team, responsible for and with a focus on graph embeddings.
+        <br> - Consulting on different enterprise solutions for graph embeddings, influencing the final purchase decision. Liaison with third party，integrating their solution with our system. Comparing various benchmarks and resource consumption. Reporting on feasibility of each solution.
+        <br> - Research and implement distributed graph embedding algorithms, processing graph data up to 1 billion nodes
+        <br> - Using graph embedding methods to optimize weibo recommendation system.
+        <br> - Building ETL pipeline from data warehouse to graph database to analysis
+        <br>
+
+         <br> <br>
+
+         <hr width="100%" style="margin: 5px 0;">
+          <p> recommendation engine overview:</p>
+          <img src="/static/images/projects/datasci/weibo_overview.png" width="70%" alt="" class="well"> <br>
+
+         <hr width="100%" style="margin: 5px 0;">
+        <br>
+
+
+- id:        "2"
+  title:     "weibo graph modelling"
+  thumb_url: "images/projects/datasci/thumb/weibo_plato_overview.png"
+  html_body: |
+        <br>
+        <p> weibo graph modelling </p>
+
+        <br> - Graph data modelling with a modified version of plato, an open sourced graph embedding platform by Tencent. I was responsible for kubernetes deployment of the framework onto the cluster; optimizing hyperparameters; resource monitoring and optimization; able to process all weibo’s active users data
+        <br> - Resolved issue of LINE algorithm implementation difference between open sourced framework and the original paper; resolved issue of number of graph partition; resolved issue of batch training vs mini batch training
+        <br> - Verified model consistency between production C++ environment vs development python tensorflow environment. Compared AUC to 5 significant figure and model weights to 8 significant figure; benchmarked against open source OGB metrics to ensure model correctness
+        <br>
+
+         (Technologies used: kubernetes, hadoop, hive, linux, python, C++) <br>
+         <br> <br>
+
+         <hr width="100%" style="margin: 5px 0;">
+          <p> graph modelling project overview:</p>
+          <img src="/static/images/projects/datasci/weibo_plato_overview.png" width="70%" alt="" class="well"> <br>
+
+         <hr width="100%" style="margin: 5px 0;">
+        <br>
+
+
+- id:        "3"
+  title:     "weibo data pipelining"
+  thumb_url: "images/projects/datasci/thumb/weibo_plato_airflow.png"
+  html_body: |
+        <br>
+        <p> Developing graph data pipeline </p>
+
+         <br> - Focusing on standardization of deployments using Kubernetes: I have done deployment of hadoop, hive, yarn cluster; deployment of airflow job management system; deployment of ray tune distributed hyperparameter optimization framework. Improving efficiencies the development pipeline
+         <br> - Research, deploy and benchmark vector search algorithm faiss, using data parallelization to achieve maximum resource utilization; Research, deploy and benchmark milvus, a distributed framework implementing faiss, aiming to achieve the required QPS and becoming the ubiquitous tool within the team
+         <br> - Developing tools in python, standardizing data collection scripts, job submission scripts, experiment management scripts; built web page for job submission in java spring
+         <br>
+
+         (Technologies used: kubernetes, Python, linux, hadoop, hive) <br>
+         <br> <br>
+
+         <hr width="100%" style="margin: 5px 0;">
+          <p>data pipeline with scheduler and self maintained hdfs cluster:</p>
+          <img src="/static/images/projects/datasci/weibo_plato_airflow.png" width="70%" alt="" class="well"> <br>
+
+         <hr width="100%" style="margin: 5px 0;">
+          <p>Faiss benchmark:</p>
+          <img src="/static/images/projects/datasci/weibo_faiss.png" width="70%" alt="" class="well"> <br>
+         <hr width="100%" style="margin: 5px 0;">
+        <br>
+
+- id:        "4"
+  title:     "Graph embeddings"
+  thumb_url: "images/projects/datasci/thumb/node2vec.png"
+  html_body: |
+        <br>
+        <p> Extracting social network information using graph embedding methods</p>
+
+         Graph embedding technics are studied with intereston public datasets, such as BlogCatalog, with the common practiceof maximizing scoring on graph reconstruction, link predictionmetrics etc. However, in the financial sector the important metricsare often more business related, for example fraud detection rates.With our privileged position of having large amount of real-worldnon-public P2P-lending social data, we aim to study empiricallywhether recent advances in graph embedding technics provide auseful signal for metrics more closely related to business interests,such as fraud detection rate.
+         <br>
+         (Technologies used: Python, neo4j, hive, jupyter, scikit-learn, SNAP, docker) <br>
+         (subsampled data ~1e6 out of ~1e8) <br> <br>
+
+         <hr width="100%" style="margin: 5px 0;">
+          <p>Data pipeline:</p>
+          <img src="/static/images/projects/datasci/data_pipeline.png" width="70%" alt="" class="well"> <br>
+         <hr width="100%" style="margin: 5px 0;">
+          <p>Embedding visualization:</p>
+          <img src="/static/images/projects/datasci/node2vec.png" width="40%" alt="" class="well"> <br>
+          <p>More info available upon request</p>
+        <br>
+        <a href="https://arxiv.org/abs/1903.05976">
+          <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to paper</button>
+        </a>
+
+- id:        "5"
+  title:     "Spark graphx"
+  thumb_url: "images/projects/datasci/thumb/neo4j.png"
+  html_body: |
+        <br>
+          <p> Building platform for big graph data </p>
+          Building a development and test platform for running graph algorithms on big data. Tasks include configuring Docker, spark and neo4j, matching versions and doing performance benchmarks and tuning. Test environment successfully simulated with docker: one hadoop/spark cluster with 1 master, 2 slaves; one neo4j server; one scala client connecting to the cluster using yarn. Successfully connected to production spark cluster.
+         <br>
+         (Technologies used: Docker, Jupyter(Scala), neo4j, Spark(graphx), yarn, hadoop, linux) <br>
+         (data max size tested ~7e7, unresolved issues in scalability, hopefully newer version of spark will be the fix) <br> <br>
+
+         <hr width="100%" style="margin: 5px 0;">
+          <p>neo4j:</p>
+          <img src="/static/images/projects/datasci/neo4j.png" width="40%" alt="" class="well"> <br>
+         <hr width="100%" style="margin: 5px 0;">
+          <p>spark graphx:</p>
+          <img src="/static/images/projects/datasci/spark_dag.png" width="70%" alt="" class="well"> <br>
+          <p>More info available upon request</p>
+
+- id:        "6"
+  title:     "debt modelling"
+  thumb_url: "images/projects/datasci/thumb/scorecard.png"
+  html_body: |
+        <br>
+          <p> Debt collections modelling </p>
+          Modelling to rank which debts are easier to collect using various strategy, e.g scorecard. Constructed a custom metric based on MAP to rank different strategies.
+         <br>
+         (Technologies used: Python, scikit-learn, scorecard, math) <br> <br>
+
+         <hr width="100%" style="margin: 5px 0;">
+          <p>Score card:</p>
+          <img src="/static/images/projects/datasci/scorecard.png" width="45%" alt="" class="well"> <br>
+         <hr width="100%" style="margin: 5px 0;">
+          <p>MAP notes:</p>
+          <img src="/static/images/projects/datasci/MAP.png" width="55%" alt="" class="well"> <br>
+          <p>More info available upon request</p>
+
+- id:        "7"
+  title:     "stock modelling"
+  thumb_url: "images/projects/datasci/thumb/globex.png"
+  html_body: |
+        <br>
+          <p> Modelling S&P 500 index </p>
+          Attempting to predict S&P 500 index prices for day trading. Method is based on scikit-learn and a momentum based indicator published in a thesis from Oxford.
+         <br>
+         (Technologies used: Python, scikit-learn, hypteropt, tpot) <br><br>
+
+         <hr width="100%" style="margin: 5px 0;">
+          <p>Final attempt:</p>
+          <img src="/static/images/projects/datasci/globex.png" width="35%" alt="" class="well"> <br>
+          <p>More info available upon request</p>
+
+- id:        "8"
+  title:     "Publications"
+  thumb_url: "images/projects/datasci/thumb/publication1.png"
+  html_body: |
+        <br>
+        <p> Publications: </p>
+        <hr width="33%" style="margin: 5px 0;">
+
+        <b>Empirical effect of graph embeddings on fraud detection/ risk mitigation</b> <br>
+        Graph embedding technics are studied with interest on public datasets, such as BlogCatalog, with the common practice of maximizing scoring on graph reconstruction, link prediction metrics etc. However, in the financial sector the important metrics are often more business related, for example fraud detection rates. With our privileged position of having large amount of real-world non-public P2P-lending social data, we aim to study empirically whether recent advances in graph embedding technics provide a useful signal for metrics more closely related to business interests, such as fraud detection rate.
+        <br>
+        <a href="https://arxiv.org/ftp/arxiv/papers/1903/1903.05976.pdf">
+          <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to paper</button>
+        </a>
+
+        <hr width="33%" style="margin: 5px 0;">
+
+        <b>A State of the Art Survey of Data Mining-based Fraud Detection and Credit Scoring</b> <br>
+        In this survey we focus on a state of the art survey of recently developed data mining techniques for fraud detection and credit scoring. Several outstanding experiments are recorded and highlighted, and the corresponding techniques, which are mostly based on supervised learning algorithms, unsupervised learning algorithms, semi- supervised algorithms, ensemble learning, transfer learning, or some hybrid ideas are explained and analysed. The goal of this paper is to provide a dense review of up-to-date techniques for fraud detection and credit scoring, a general analysis on the results achieved and upcoming challenges for further researches.
+        <br>
+        <a href="https://www.matec-conferences.org/articles/matecconf/pdf/2018/48/matecconf_meamt2018_03002.pdf">
+          <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-link" aria-hidden="true"></span> Link to paper</button>
+        </a>

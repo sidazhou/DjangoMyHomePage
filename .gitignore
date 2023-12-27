@@ -71,12 +71,3 @@ local-data/
 tmp/
 *.log
 #notebook_assets
-
-# Jupyter NB Checkpoints
-.ipynb_checkpoints/
-
-data/
-notebooks/data/
-notebooks/dataset/
-staticroot/
-

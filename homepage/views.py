@@ -20,11 +20,6 @@ def home(request):
   with open(cwd / "homepage/static/data/science.yaml", "r") as stream:
     try:
         science_projects=yaml.safe_load(stream)
-        print('science_projects')
-        print('science_projects')
-        print(science_projects)
-        print('science_projects')
-        print('science_projects')
     except yaml.YAMLError as e:
         print(e)
 
